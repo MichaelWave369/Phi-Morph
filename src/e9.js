@@ -103,7 +103,7 @@ export function simulateE9({
  let q=0,qdot=0;
  let anchors=anchorsAt(hub,q,qdot);
  const initial=energies(hub,nodes,q,qdot,load,groundEnabled,spokesEnabled);
- const w={drive:0,qDrag:0,hubDrag:0,rotationDrag:0,nodeDrag:0,
+ const w={drive:0,motor:0,qDrag:0,hubDrag:0,rotationDrag:0,nodeDrag:0,
    spokeDamping:0,rimDamping:0,floorFriction:0,floorDamping:0};
  let positive=0,negative=0,forceHits=0,powerHits=0,normalImpulse=0;
  let frictionImpulse=0,peakSpokeForce=0,maxRimStrain=0,peakOverlap=0;
@@ -139,6 +139,7 @@ export function simulateE9({
    cycleTrack+=error*error*dt;
    const inputWork=limited.sampledMechanicalPower*dt;
    w.drive+=inputWork;
+   w.motor+=(-torque)*hub.omega*dt;
    positive+=Math.max(0,inputWork);negative+=Math.min(0,inputWork);
    cyclePositive+=Math.max(0,inputWork);cycleNegative+=Math.min(0,inputWork);
    w.qDrag-=Q_DRAG*qdot*qdot*dt;
@@ -243,7 +244,7 @@ export function simulateE9({
    peakAppliedDrive:round(peakAppliedDrive),
    peakSampledDrivePower:round(peakSampledDrivePower),
    grossPositiveDriveWork:round(positive),negativeDriveWork:round(negative),
-   netDriveWork:round(w.drive),motorWork:round(-torque*0 + 0),
+   netDriveWork:round(w.drive),motorWork:round(w.motor),
    qDragWork:round(w.qDrag),hubDragWork:round(w.hubDrag),
    rotationDragWork:round(w.rotationDrag),nodeDragWork:round(w.nodeDrag),
    spokeDampingWork:round(w.spokeDamping),rimDampingWork:round(w.rimDamping),

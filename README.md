@@ -195,6 +195,30 @@ evaluated without being confused with simulated receipts.
 
 Protocol: [PM-E8-0.9.0](docs/EXPERIMENT_E8.md).
 
+## E9: limited actuator mechanically coupled back to MorphWheel
+
+E9 is the tenth research station, combining a **single shared normalized
+actuator coordinate q** with the E7-style 24-node spring-linked wheel.
+The controller's commanded q follows the established round-to-square-
+to-round schedule, but actual q is dynamically determined by the E8
+force/power-limited PD controller and the deforming rim's back-reaction.
+
+Unlike a scripted geometric animation, the spring potential and
+damping forces feed a work-conjugate reaction into q. The modeled
+controller has to perform explicit mechanical work to overcome it.
+
+The interactive station compares **requested versus achieved shape**
+alongside a moving wheel and ground-contact visualization, with
+27 force/power/controller configurations, five controls and a
+timestep-halving check. Crucially, disconnecting the spoke linkage
+must reproduce the earlier E8 actuator mathematics.
+
+No real pneumatic/electric actuator, pressure-regulated liquid, tire
+material, brake or tested traction behavior is provided. Results are
+SIMULATED and dimensionless, not physical motor efficiency claims.
+
+Protocol: [PM-E9-1.0.0](docs/EXPERIMENT_E9.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
