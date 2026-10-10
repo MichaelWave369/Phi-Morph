@@ -26,7 +26,10 @@ const SPOKE_STIFFNESS = 21, SPOKE_DAMPING = 0.45;
 const RIM_STIFFNESS = 11, RIM_DAMPING = 0.14;
 const HUB_DRAG = 0.025, NODE_DRAG = 0.035, ROTATION_DRAG = 0.025;
 const FRICTION_SPEED = 0.2;
-const round = n => Math.round(n*1e6)/1e6;
+const round = n => {
+  const value = Math.round(n*1e6)/1e6;
+  return value === 0 ? 0 : value; // canonicalize signed zero in receipts
+};
 const cross = (ax,ay,bx,by) => ax*by-ay*bx;
 const vec = (x,y) => ({x,y});
 const rotate = (x,y,c,s) => ({x:c*x-s*y,y:s*x+c*y});
