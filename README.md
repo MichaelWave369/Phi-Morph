@@ -147,6 +147,30 @@ performance is predicted.
 
 Protocol: [PM-E6-0.7.0](docs/EXPERIMENT_E6.md).
 
+## E7: force limits and repeated morphing-cycle audit
+
+E7 is a separate dimensionless experiment that gives every shape-changing
+actuator a **capped axial force**, and tests how the virtual rim responds to
+repeated morphing cycles **without resetting the moving state**.
+
+All 24-node cases share the same round starting geometry and rim rest lengths.
+Controls cover force caps of 0, 4, 10 or uncapped, commanded stroke fractions
+of 0%, 50% or 100%, and one versus three continuous shape-change cycles.
+
+The new bench animates the force-limited rim and reports cap saturation
+frequency, node-to-anchor tracking error, per-cycle positive/negative servo
+mechanical work, numerical rim strain and energy-residual diagnostics.
+A 24-case study includes four negative controls and exports SIMULATED
+JSON/CSV evidence receipts.
+
+**This is not a real durability or fatigue test**. A peak strain flag is
+an arbitrary model diagnostic, and mechanical actuator work is not
+electrical battery use. The solver contains no measured material laws,
+thermally limited motors, pressure systems, tire rubber or validated road
+traction.
+
+Protocol: [PM-E7-0.8.0](docs/EXPERIMENT_E7.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
