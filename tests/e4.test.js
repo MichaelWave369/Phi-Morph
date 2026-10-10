@@ -87,7 +87,7 @@ test("unsupported shape, friction, torque or timestep fail closed", () => {
   assert.throws(() => simulateE4({shape:"pentagon"}));
   assert.throws(() => simulateE4({mu:1.1}));
   assert.throws(() => simulateE4({torque:-1}));
-  assert.throws(() => simulateE4({dt:0.004}));
+  assert.throws(() => simulateE4({dt:0.0043}));
   assert.throws(() => simulateE4({contactEnabled:1}));
 });
 

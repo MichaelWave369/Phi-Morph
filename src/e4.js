@@ -37,9 +37,15 @@ export function e4Outline(shape = "circle") {
       y: signPow(Math.sin(angle), exponent),
     };
   });
-  const rms = Math.sqrt(unscaled.reduce((s, p) => s + p.x*p.x + p.y*p.y, 0) / E4_NODE_COUNT);
+  // Explicit recentering removes tiny floating-point symmetry errors
+  // introduced by signed square roots at quadrantal angles.
+  const cx = unscaled.reduce((sum, p) => sum + p.x, 0) / E4_NODE_COUNT;
+  const cy = unscaled.reduce((sum, p) => sum + p.y, 0) / E4_NODE_COUNT;
+  const centered = unscaled.map(p => ({ id:p.id, x:p.x-cx, y:p.y-cy }));
+  const rms = Math.sqrt(centered.reduce((s, p) =>
+    s + p.x*p.x + p.y*p.y, 0) / E4_NODE_COUNT);
   const scale = E4_RMS_RADIUS / rms;
-  return unscaled.map(p => ({ id: p.id, x: p.x * scale, y: p.y * scale }));
+  return centered.map(p => ({ id:p.id, x:p.x*scale, y:p.y*scale }));
 }
 
 export function e4ContactForce(penetration, velocityX, velocityY, mu, contactEnabled = true) {
@@ -50,7 +56,8 @@ export function e4ContactForce(penetration, velocityX, velocityY, mu, contactEna
   const normal = Math.max(0, E4_FLOOR_K * penetration +
     E4_FLOOR_DAMPING * Math.max(0, -velocityY));
   // Velocity-regularized friction, |Ft| <= μFn. Not true static friction.
-  const tangential = -mu * normal * Math.tanh(velocityX / FRICTION_SPEED_SCALE);
+  const tangential = mu === 0 ? 0 :
+    -mu * normal * Math.tanh(velocityX / FRICTION_SPEED_SCALE);
   return { normal, tangential };
 }
 
