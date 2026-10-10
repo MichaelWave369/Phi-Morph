@@ -119,3 +119,27 @@
 .e3-panel>.e2-disclosure{margin-top:19px}
 @media(max-width:960px){.e3-bench-layout{grid-template-columns:1fr}}
 @media(max-width:670px){.e3-panel{padding:16px}.e3-stage,.e3-setup,.e3-data-block{padding:13px}.e3-control-strip{grid-template-columns:1fr}.e3-empty-view{min-height:200px}.e3-playback{gap:7px}.e3-playback button{min-width:74px;padding:8px 9px}}
+
+
+/* E4: rotating discrete-contact rig. This is a separate model from E3. */
+.e4-panel{padding:27px;margin-top:18px}
+.e4-layout{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(280px,.85fr);gap:14px;margin-top:19px}
+.e4-view,.e4-setup,.e4-matrix-block{border:1px solid #294454;background:#0b1927;border-radius:11px;padding:18px;min-width:0}
+.e4-svg{width:100%;height:auto;display:block;border:1px solid #315467;border-radius:9px}
+.e4-await{min-height:330px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:13px;background:#102637;border:1px dashed #345769;border-radius:9px;padding:18px}
+.e4-await strong{font-size:12px;color:#c2e8eb;letter-spacing:.1em}
+.e4-await span{font-size:11px;color:#87abba;line-height:1.7}
+.e4-view>.fine-print{line-height:1.7;margin-top:14px}
+.e4-setup label{display:flex;flex-direction:column;gap:8px;color:#afd0dc;font-size:11px;font-weight:700;margin:15px 0}
+.e4-setup select{background:#112b3c;color:#e5fafa;padding:12px;border-radius:7px;border:1px solid #376274;font-size:11px;width:100%}
+.e4-sweep{margin-top:27px;padding-top:23px;border-top:1px solid #2c4858}
+.e4-sweep .e1-header h2{font-size:24px}
+.e4-matrix-block{margin-top:19px}
+.e4-matrix-table{min-width:610px}
+.e4-matrix-table th:first-child,.e4-matrix-table td:first-child{text-align:left}
+.e4-matrix-table td{padding:6px 8px}
+.e4-travel-cell{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;border-radius:5px;min-width:92px;padding:13px 6px;text-align:center;color:#eafefd;border:1px solid #2d5a62}
+.e4-panel .e3-control-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+.e4-panel>.e2-disclosure{margin-top:18px}
+@media(max-width:950px){.e4-layout{grid-template-columns:1fr}}
+@media(max-width:670px){.e4-panel{padding:16px}.e4-view,.e4-setup,.e4-matrix-block{padding:13px}.e4-await{min-height:220px}.e4-panel .e3-control-strip{grid-template-columns:1fr}}
