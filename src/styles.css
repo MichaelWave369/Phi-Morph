@@ -11,3 +11,44 @@
 @media(max-width:1010px){.workbench{grid-template-columns:1fr}.protocol-panel{grid-template-columns:1fr}.slider-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px}.runtime{max-width:500px}}
 @media(max-width:650px){.header-right .signal{display:none}.header-right{gap:0}.hero-stat{display:none}.topbar{height:73px}.brand b{font-size:16px}.container{padding-top:26px}.viewport{height:340px}.tabs{grid-template-columns:1fr}.tab{min-height:0;padding:12px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.slider-stack{grid-template-columns:1fr}.viewport-panel,.control-panel,.results,.protocol-panel{padding:16px}.pill{white-space:normal;font-size:8px}.panel-heading h2{font-size:19px}.research-note{grid-template-columns:1fr}.metric{padding:14px}.protocol-panel{gap:18px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* E1 controlled-study workbench */
+.e1-panel{padding:27px;margin-top:18px}
+.e1-header{display:flex;align-items:flex-start;justify-content:space-between;gap:22px}
+.e1-header h2{font-size:29px;letter-spacing:-.04em;margin:0 0 12px}
+.e1-summary{color:#9fbccb;max-width:760px;line-height:1.7;font-size:12px;margin:0 0 16px}
+.e1-constraints{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 22px}
+.e1-constraints>span{background:#122b37;color:#b3d0dc;border:1px solid #27505a;border-radius:6px;padding:10px 13px;font-size:10px}
+.e1-constraints strong{color:#85f3e5;font-size:14px;margin-right:4px}
+.e1-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid #2a404d;padding-top:19px}
+.e1-controls label{font-size:11px;color:#a1bdcb;font-weight:700}
+.e1-controls select{border:1px solid #466b78;border-radius:6px;padding:12px;color:#d5f8f9;background:#102636;max-width:100%;min-width:260px}
+.e1-caveat{max-width:920px;margin:16px 0 0}
+.e1-dirty{font-size:11px;color:#fbd58b;background:#4a3a203d;padding:10px 13px;border-radius:7px;border:1px solid #745d34}
+.e1-results{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.8fr);gap:13px;margin-top:23px}
+.e1-chart,.e1-diagnostics,.e1-table-wrap{background:#0b1826;border:1px solid #264153;border-radius:11px;padding:19px;min-width:0}
+.e1-inner-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+.e1-inner-heading strong{font-size:14px;color:#d9f7f8}
+.e1-inner-heading span{font-size:9px;color:#78afbf;letter-spacing:.1em}
+.e1-plot-container{min-height:220px}
+.e1-plot-container svg{display:block;width:100%;height:auto;max-height:310px}
+.e1-legend{display:flex;gap:17px;align-items:center;justify-content:center;flex-wrap:wrap;color:#a3bfd0;font-size:10px}
+.e1-legend i{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:50%}
+.e1-chart .fine-print{line-height:1.7;margin:13px 0 0}
+.e1-diagnostic-note{font-size:11px;color:#97b3c2;line-height:1.7}
+.e1-check{padding:10px 0;border-bottom:1px solid #244050}
+.e1-check>div{display:flex;justify-content:space-between;gap:12px;font-size:11px}
+.e1-check strong{color:#cce9ee}
+.e1-check span{font-variant-numeric:tabular-nums;color:#8ce0d5}
+.e1-check small{display:block;margin-top:6px;font-size:10px;color:#789caa}
+.e1-diagnostics>.fine-print{margin-top:17px}
+.e1-table-wrap{margin-top:14px}
+.e1-table{min-width:540px}
+.e1-table td:first-child{color:#89e4da}
+.e1-receipt-info{font-size:10px;line-height:1.6;color:#82c3bb;margin:14px 0 0}
+.e1-empty{background:#0b1826;border:1px dashed #3e6470;border-radius:9px;text-align:center;display:flex;flex-direction:column;gap:9px;align-items:center;padding:38px 18px;margin-top:20px}
+.e1-empty strong{font-size:11px;letter-spacing:.14em;color:#b5e5df}
+.e1-empty span{font-size:11px;color:#789cae}
+@media(max-width:900px){.e1-results{grid-template-columns:1fr}}
+@media(max-width:650px){.e1-panel{padding:16px}.e1-header{display:block}.e1-header .pill{display:inline-block;margin-bottom:15px}.e1-controls{align-items:stretch;flex-direction:column}.e1-controls select,.e1-controls button{width:100%}.e1-inner-heading{align-items:flex-start;flex-direction:column;gap:4px}}
