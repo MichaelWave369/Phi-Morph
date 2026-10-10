@@ -45,6 +45,21 @@ orientation, distributions, boundary geometry and other differences. This
 
 Full protocol: [PM-E1-0.2.0](docs/EXPERIMENT_E1.md).
 
+## E2: orientation and scalar rest-length-budget audit
+
+The third panel performs 144 deterministic modeled cases: two normalization
+policies, three geometric layouts, eight orientations and three load levels.
+The audit directly contrasts matching RMS starting radius with matching the
+scalar sum of all 48 spring rest lengths, and reports orientation-sensitive
+displacement ranges. Results are exportable as a provenance-labeled JSON
+receipt or 144-case CSV.
+
+These are still exploratory spring-model comparisons, **not claims about
+material properties, fluid pressure, friction or vehicle design**. Neither
+policy matches all individual link lengths or the physical material budget.
+
+Protocol: [PM-E2-0.3.0](docs/EXPERIMENT_E2.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.

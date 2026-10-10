@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Scene from "./Scene.jsx";
 import E1Panel from "./E1Panel.jsx";
+import E2Panel from "./E2Panel.jsx";
 import {
   DEFAULTS, GEOMETRIES, MODEL_VERSION, PROTOCOL_VERSION,
   buildReceipt, simulate
@@ -71,7 +72,7 @@ export default function App() {
 
       <main className="container">
         <section className="hero">
-          <div><p className="eyebrow">EXPERIMENTS E0 + E1 / PROGRAMMABLE STRUCTURES</p>
+          <div><p className="eyebrow">EXPERIMENTS E0 + E1 + E2 / PROGRAMMABLE STRUCTURES</p>
             <h1>What if a machine could <em>reshape itself?</em></h1>
             <p className="lede">Explore 24 linked, pressure-driven virtual cells across circular, golden-angle and nested geometries. Make a hypothesis. Compare the controls. Keep the receipt.</p>
           </div>
@@ -166,8 +167,10 @@ export default function App() {
 
         <E1Panel params={params} />
 
+        <E2Panel params={params} />
+
         <section className="research-note"><div><p className="eyebrow">RESEARCH DIRECTION</p><h2>From morphing wheels to adaptive machine shells.</h2></div>
-          <p>This project investigates geometry as a design variable for future adaptive systems. A fluid-filled physical shell would also require verified membranes, pressure vessels, pumps, electrical isolation, load paths, fatigue analysis and failure testing. Neither E0 nor E1 provides those physical validations.</p>
+          <p>This project investigates geometry as a design variable for future adaptive systems. A fluid-filled physical shell would also require verified membranes, pressure vessels, pumps, electrical isolation, load paths, fatigue analysis and failure testing. E0, E1, and E2 provide none of those physical validations.</p>
         </section>
       </main>
 
