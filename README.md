@@ -30,6 +30,21 @@ Requires Node 20.19+ or Node 22.12+.
 
 GitHub Actions includes CI and a deploy workflow. The deployment workflow runs on pushes to main; set repository Settings → Pages → Build and deployment → Source → GitHub Actions if needed. A workflow file does not itself prove successful deployment.
 
+## E1: topology-controlled load sweeps
+
+**New in v0.2.0:** The second laboratory panel tests a consistent 24-node, 48-link,
+four-regular graph across all three geometries. The layouts are centered and
+scaled to a common initial RMS radius. Run 7 force levels per shape, switch
+between a soft-tether condition and four pinned bottom nodes, inspect the
+RMS displacement traces, compare two numerical time steps, and export
+SIMULATED JSON / CSV research receipts.
+
+E1 reduces an E0 topology confounder but still leaves different spring lengths,
+orientation, distributions, boundary geometry and other differences. This
+**does not demonstrate physical material superiority or water-based tires**.
+
+Full protocol: [PM-E1-0.2.0](docs/EXPERIMENT_E1.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
