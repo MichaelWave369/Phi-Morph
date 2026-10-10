@@ -171,6 +171,7 @@ export function simulateE6({
     spokeDamping:0,rimDamping:0,groundFriction:0,groundClosingDamping:0};
   let peakPenetration=0,peakNormalForce=0,normalImpulse=0,frictionImpulse=0;
   let peakActuatorPower=0,peakActuatorForce=0,contactSteps=0,finite=true;
+  let positiveActuatorWork=0,negativeActuatorWork=0;
   const frames=captureFrames?[]:undefined;
   if(captureFrames) frames.push(poseFrames(0,dt,hub,nodes,anchors,contactEnabled));
 
@@ -197,6 +198,8 @@ export function simulateE6({
       tau-=cross(a.rx,a.ry,springFx,springFy);
       const power=springFx*a.commandVX+springFy*a.commandVY;
       work.actuator+=power*dt;actuatorPower+=power;
+      positiveActuatorWork+=Math.max(0,power)*dt;
+      negativeActuatorWork+=Math.min(0,power)*dt;
       forceSum=Math.max(forceSum,Math.hypot(springFx,springFy));
       work.spokeDamping-=SPOKE_DAMPING*(vrx*vrx+vry*vry)*dt;
       work.nodeDrag-=NODE_DRAG*(n.vx*n.vx+n.vy*n.vy)*dt;
@@ -271,7 +274,8 @@ export function simulateE6({
       peakActuatorForce:round(peakActuatorForce),
       peakActuatorPowerMagnitude:round(peakActuatorPower),
       actuatorNetWork:round(work.actuator),
-      actuatorPositiveWork:round(Number.NaN), // placeholder replaced below
+      actuatorPositiveWork:round(positiveActuatorWork),
+      actuatorNegativeWork:round(negativeActuatorWork),
       motorWork:round(work.motor),
       nodeDampingWork:round(work.nodeDrag),
       hubDampingWork:round(work.hubDrag),
@@ -351,7 +355,7 @@ export function buildE6Receipt({
     caveats:[
       "A mass-spring demonstration with body-attached moving anchor points, not a pressure-driven tire.",
       "Held-square and round controls begin at different outlines and independent rim rest lengths; not a controlled performance ranking.",
-      "Signed net actuator work may be negative when returning energy; it is not electrical consumption. Gross positive work must be reported separately.",
+      "Signed net actuator work may be negative when returning energy. Gross positive work is reported separately but is not electrical consumption.",
       "No motors, pumps, energy recovery efficiency, membrane, fluid, wear, temperature or manufacturing constraints.",
       "Velocity-smoothed friction and discrete node-floor penalty are not calibrated physical laws.",
       "Run-to-run timestep differences do not constitute independent physical validation.",
@@ -360,12 +364,13 @@ export function buildE6Receipt({
 }
 export function e6Csv(receipt){
   const rows=[["protocol","mode","mu","torque","load","travel","actuatorNetWork",
-    "motorWork","peakActuatorForce","energyResidual","normalImpulse",
+    "actuatorPositiveWork","actuatorNegativeWork","motorWork","peakActuatorForce","energyResidual","normalImpulse",
     "frictionImpulse","numericallyFinite"]];
   for(const r of receipt.runs){
     const m=r.metrics;
     rows.push([receipt.protocol,r.mode,r.mu,r.torque,r.load,
-      m?.horizontalTravel??"",m?.actuatorNetWork??"",m?.motorWork??"",
+      m?.horizontalTravel??"",m?.actuatorNetWork??"",
+      m?.actuatorPositiveWork??"",m?.actuatorNegativeWork??"",m?.motorWork??"",
       m?.peakActuatorForce??"",m?.energyResidual??"",m?.normalImpulse??"",
       m?.frictionImpulse??"",r.numericallyFinite]);
   }

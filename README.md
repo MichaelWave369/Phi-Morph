@@ -124,6 +124,29 @@ only with force-consistent mechanics and explicit actuator work.
 
 Protocol: [PM-E5-0.6.0](docs/EXPERIMENT_E5.md).
 
+## E6: active morphing rim and actuator energy ledger
+
+The seventh station introduces an **explicit deformable rim**. It contains 24
+independently moving point masses connected by rim springs, plus moving
+body-mounted spoke anchors and **equal-and-opposite hub reactions and
+moments**. A smooth round → rounded-square → round command changes the
+anchor targets during an eight-unit numerical trial. Actual nodes respond
+to forces rather than teleporting to an interpolated shape.
+
+E6 measures **gross positive actuator work, negative actuator work, and
+signed net work separately**, alongside motor work and the full model's
+energy-balance residual. The control study has 18 combinations of stationary
+and morphing command modes, friction and torque, plus no-ground,
+no-friction and no-actuation controls and dt-halving checks.
+
+The animation exposes rim masses, their moving target anchors, and ground
+contact points. JSON/CSV receipts preserve SIMULATED provenance. This
+is a force-paired toy model, **not a validated fluid-actuated tire**.
+No electrical energy use, pump, material durability or actual braking
+performance is predicted.
+
+Protocol: [PM-E6-0.7.0](docs/EXPERIMENT_E6.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
