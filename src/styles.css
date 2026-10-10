@@ -78,3 +78,44 @@
 .e2-disclosure strong{color:#e8cf99;font-size:12px}
 .e2-disclosure p{color:#bac4b8;font-size:11px;line-height:1.7;margin:8px 0 0}
 @media(max-width:650px){.e2-panel{padding:16px}.e2-chart-heading{align-items:flex-start;flex-direction:column}.e2-details{padding:11px}}
+
+
+/* E3 ground-contact bench: a separate experimental model, not a tire. */
+.e3-panel{padding:27px;margin-top:18px}
+.e3-panel .e1-header h2{max-width:650px;line-height:1.2}
+.e3-bench-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(270px,.8fr);gap:14px;margin-top:19px}
+.e3-stage,.e3-setup,.e3-data-block{border:1px solid #294354;border-radius:11px;background:#0b1927;padding:18px;min-width:0}
+.e3-svg{display:block;width:100%;height:auto;background:radial-gradient(circle at 50% 35%,#173344,#0a1826 67%);border:1px solid #284457;border-radius:9px}
+.e3-empty-view{min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px dashed #33566b;border-radius:9px;background:#0d2130;color:#b1d6e0;text-align:center}
+.e3-empty-view strong{font-size:13px;letter-spacing:.13em}
+.e3-empty-view small{font-size:11px;color:#789aab}
+.e3-playback{display:flex;gap:13px;align-items:center;padding:17px 1px 7px}
+.e3-playback button{padding:9px 13px;border:1px solid #50bcbf;border-radius:7px;background:#12363e;color:#c8f7ef;min-width:100px;font-size:11px;font-weight:800}
+.e3-playback button:disabled{opacity:.45;cursor:not-allowed}
+.e3-playback input{flex:1;min-width:50px;accent-color:#78dfd8}
+.e3-playback span{white-space:nowrap;font-size:10px;color:#99bfcb;font-variant-numeric:tabular-nums}
+.e3-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:10px;color:#87adbb}
+.e3-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.e3-water{background:#40c1df}.e3-contact{background:#ffbe76}.e3-ground{background:#6de4d0}
+.e3-setup label{display:flex;flex-direction:column;gap:7px;font-size:11px;color:#b6d4df;font-weight:700;margin:17px 0}
+.e3-setup select{width:100%;background:#112a3a;border:1px solid #3b6170;border-radius:7px;color:#e1f6fc;padding:12px;font-size:11px}
+.e3-full-button{width:100%;margin-top:6px}
+.e3-setup>.fine-print{line-height:1.6;margin-top:13px}
+.e3-metrics{border-top:1px solid #2b4958;margin-top:18px;padding-top:11px}
+.e3-metrics>div{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid #1d3444;padding:10px 0}
+.e3-metrics span{font-size:10px;color:#96b4c1}
+.e3-metrics strong{font-size:15px;color:#91f4e5;font-variant-numeric:tabular-nums}
+.e3-metrics small{display:block;font-size:10px;color:#7699a9;line-height:1.6;margin-top:14px}
+.e3-sweep{margin-top:28px;border-top:1px solid #294657;padding-top:23px}
+.e3-sweep .e1-header h2{font-size:22px}
+.e3-sweep .button-row{margin-top:14px}
+.e3-control-strip{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.e3-control-strip>div{padding:14px;background:#102a32;border:1px solid #2a5b52;border-radius:8px;display:flex;justify-content:space-between;align-items:center;gap:9px;flex-wrap:wrap}
+.e3-control-strip span{font-size:9px;letter-spacing:.06em;color:#97c4b6}
+.e3-control-strip strong{font-size:12px;color:#aeecdf;font-variant-numeric:tabular-nums}
+.e3-data-block{margin-top:14px}
+.e3-table{min-width:770px}
+.e3-table td:first-child{color:#b6e9e3}
+.e3-panel>.e2-disclosure{margin-top:19px}
+@media(max-width:960px){.e3-bench-layout{grid-template-columns:1fr}}
+@media(max-width:670px){.e3-panel{padding:16px}.e3-stage,.e3-setup,.e3-data-block{padding:13px}.e3-control-strip{grid-template-columns:1fr}.e3-empty-view{min-height:200px}.e3-playback{gap:7px}.e3-playback button{min-width:74px;padding:8px 9px}}

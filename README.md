@@ -60,6 +60,28 @@ policy matches all individual link lengths or the physical material budget.
 
 Protocol: [PM-E2-0.3.0](docs/EXPERIMENT_E2.md).
 
+## E3: MorphWheel unilateral ground-contact bench
+
+The fourth laboratory adds a **2D, dimensionless, vertical hub + spring-cell
+ground-contact simulator**. Twenty-four linked virtual nodes can press into
+a flat floor under a prescribed hub load; the floor returns upward reaction
+only during numerical overlap. This is a **unilateral penalty-contact model**,
+not a tire road-test or physical fluid actuator.
+
+- Scrub an animated 24-node virtual shell with contact nodes highlighted.
+- Compare soft and firm *numerical floor penalties* under four loads and
+  three starting geometries (24 contact simulations).
+- Check three **no-ground negative controls**, whose reaction must be zero.
+- Export protocol-versioned SIMULATED JSON receipts and a 24-case CSV.
+- Interpret hub drop, maximum numerical overlap, late-window reaction and
+  final contact-node counts as **solver-specific proxies only**.
+
+The underlying model has no rotation, braking, tire contact area, calibrated
+units, membranes, electrohydraulics, charged water, or material validation.
+Ground stiffness and damping both differ between the two numeric floors.
+
+Full E3 protocol: [PM-E3-0.4.0](docs/EXPERIMENT_E3.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
