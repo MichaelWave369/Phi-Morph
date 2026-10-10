@@ -9,6 +9,7 @@ import E6Panel from "./E6Panel.jsx";
 import E7Panel from "./E7Panel.jsx";
 import E8Panel from "./E8Panel.jsx";
 import E9Panel from "./E9Panel.jsx";
+import E10Panel from "./E10Panel.jsx";
 import {
   DEFAULTS, GEOMETRIES, MODEL_VERSION, PROTOCOL_VERSION,
   buildReceipt, simulate
@@ -79,7 +80,7 @@ export default function App() {
 
       <main className="container">
         <section className="hero">
-          <div><p className="eyebrow">EXPERIMENTS E0 TO E9 / PROGRAMMABLE STRUCTURES</p>
+          <div><p className="eyebrow">EXPERIMENTS E0 TO E10 / PROGRAMMABLE STRUCTURES</p>
             <h1>What if a machine could <em>reshape itself?</em></h1>
             <p className="lede">Explore 24 linked, pressure-driven virtual cells across circular, golden-angle and nested geometries. Make a hypothesis. Compare the controls. Keep the receipt.</p>
           </div>
@@ -190,8 +191,10 @@ export default function App() {
 
         <E9Panel />
 
+        <E10Panel />
+
         <section className="research-note"><div><p className="eyebrow">RESEARCH DIRECTION</p><h2>From morphing wheels to adaptive machine shells.</h2></div>
-          <p>This project investigates geometry as a design variable for future adaptive systems. A fluid-filled physical shell would also require verified membranes, pressure vessels, pumps, electrical isolation, load paths, fatigue analysis and failure testing. E0 through E9 provide none of those physical validations.</p>
+          <p>This project investigates geometry as a design variable for future adaptive systems. A fluid-filled physical shell would also require verified membranes, pressure vessels, pumps, electrical isolation, load paths, fatigue analysis and failure testing. E0 through E10 provide none of those physical validations.</p>
         </section>
       </main>
 
