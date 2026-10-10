@@ -52,3 +52,29 @@
 .e1-empty span{font-size:11px;color:#789cae}
 @media(max-width:900px){.e1-results{grid-template-columns:1fr}}
 @media(max-width:650px){.e1-panel{padding:16px}.e1-header{display:block}.e1-header .pill{display:inline-block;margin-bottom:15px}.e1-controls{align-items:stretch;flex-direction:column}.e1-controls select,.e1-controls button{width:100%}.e1-inner-heading{align-items:flex-start;flex-direction:column;gap:4px}}
+
+
+/* E2 scalar link-budget/orientation study */
+.e2-panel{padding:27px;margin-top:18px}
+.e2-chart-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:25px 0 13px}
+.e2-chart-heading h3{font-size:17px;color:#e4f6fb;margin:0 0 8px;letter-spacing:-.02em}
+.e2-chart-heading p{font-size:11px;color:#88a5b6;margin:0;line-height:1.6}
+.e2-load-select{display:flex;gap:6px;flex-wrap:wrap}
+.e2-load-select button{background:#142f40;color:#a8cbd5;border:1px solid #33576a;border-radius:6px;padding:10px 12px;font-size:10px;font-weight:800;letter-spacing:.04em}
+.e2-load-select button.active{color:#072c35;background:#84e9de;border-color:#84e9de}
+.e2-matrix-scroll{width:100%;overflow-x:auto;scrollbar-width:thin}
+.e2-matrix{min-width:780px;border-radius:10px;overflow:hidden;background:#081824;border:1px solid #264154;padding:10px}
+.e2-row{display:grid;grid-template-columns:minmax(158px,1.65fr) repeat(8,minmax(61px,1fr));gap:5px;align-items:center;margin:5px 0}
+.e2-row>strong{color:#c7e4e9;font-size:11px;font-weight:700;padding-left:9px}
+.e2-row>span{color:#9ac0d0;font-size:10px;text-align:center}
+.e2-matrix-head{padding:10px 0;border-bottom:1px solid #315163}
+.e2-matrix-head>span:first-child{text-align:left;padding-left:9px}
+.e2-group-title{color:#72dace;font-size:10px;letter-spacing:.12em;font-weight:800;padding:17px 8px 9px}
+.e2-heat{border:1px solid #365e6a;border-radius:6px;min-height:41px;display:flex;justify-content:center;align-items:center;font-size:11px;color:#efffff;font-variant-numeric:tabular-nums;font-weight:700}
+.e2-matrix-note{margin:12px 0 0}
+.e2-details{background:#0b1826;border:1px solid #264153;border-radius:11px;padding:19px;margin-top:17px}
+.e2-audit-table{min-width:670px}
+.e2-disclosure{background:#7d68351c;border:1px solid #7d683555;border-radius:9px;padding:15px 18px;margin-top:17px}
+.e2-disclosure strong{color:#e8cf99;font-size:12px}
+.e2-disclosure p{color:#bac4b8;font-size:11px;line-height:1.7;margin:8px 0 0}
+@media(max-width:650px){.e2-panel{padding:16px}.e2-chart-heading{align-items:flex-start;flex-direction:column}.e2-details{padding:11px}}
