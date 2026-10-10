@@ -104,6 +104,26 @@ The comparisons are not real design rankings.
 
 Protocol: [PM-E4-0.5.0](docs/EXPERIMENT_E4.md).
 
+## E5: numerical resolution and energy-ledger audit
+
+Before allowing freeform simulated morphing, the sixth station verifies
+how sensitive the E4 rigid-wheel mechanics are to model discretization.
+E5 runs **18 cases**: two fixed shapes × three point resolutions (24/48/96)
+× three time steps (0.01, 0.005, 0.0025). A selectable force/torque/friction
+set is frozen for each experiment receipt.
+
+The new energy ledger records rigid kinetic energy, applied-load potential,
+ground penalty-spring potential, motor work, friction losses, viscous
+damping and a **numerical energy-balance residual**. A visible residual is
+not hidden as a success status. Four no-ground/no-friction controls test
+that no lateral force appears without a frictional ground pathway.
+
+Outputs are SIMULATED, dimensionless, and **do not demonstrate powered
+shape changes or real tire efficiency**. E6 can tackle actuator deformation
+only with force-consistent mechanics and explicit actuator work.
+
+Protocol: [PM-E5-0.6.0](docs/EXPERIMENT_E5.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
