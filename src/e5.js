@@ -190,7 +190,7 @@ export function simulateE5({
     relativeEnergyResidual:round(Math.abs(residual)/denominator),
   };
   return {shape,count,dt,mu,torque,load,contactEnabled,steps,duration,
-    modelVersion:E5_MODEL, numericalFinite:true,metrics,frames};
+    modelVersion:E5_MODEL, numericallyFinite:true,metrics,frames};
 }
 
 export function buildE5Receipt({
