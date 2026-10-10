@@ -338,3 +338,48 @@
 .e9-panel>.e2-disclosure{margin-top:17px}
 @media(max-width:980px){.e9-workbench{grid-template-columns:1fr}}
 @media(max-width:680px){.e9-panel{padding:16px}.e9-visual,.e9-controls{padding:13px}.e9-empty{min-height:220px}}
+
+
+/* E10 local SI-data gate and actuator architecture options */
+.e10-panel{padding:27px;margin-top:19px}
+.e10-architecture,.e10-data-panel,.e10-meta-panel,.e10-report{min-width:0;background:#0b1c29;border:1px solid #2c4d59;border-radius:11px;padding:19px}
+.e10-architecture{margin-top:17px}
+.e10-arch-select{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:17px}
+.e10-arch-select button{background:#142e3e;border:1px solid #375b6a;color:#b4d2dd;border-radius:8px;padding:13px;text-align:left;line-height:1.5;font-weight:700;font-size:11px}
+.e10-arch-select button.e10-selected{background:#1d494b;border:1px solid #87e8cf;color:#d9fff0}
+.e10-arch-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:13px 0 9px}
+.e10-arch-info>div{display:flex;flex-direction:column;gap:8px;background:#0d2a36;padding:13px;border-radius:7px}
+.e10-arch-info span{color:#8daebb;text-transform:uppercase;letter-spacing:.06em;font-size:9px}
+.e10-arch-info strong{font-size:11px;font-weight:600;color:#cfedf0;line-height:1.6}
+.e10-architecture>.fine-print{margin-top:14px;line-height:1.65}
+.e10-workbench{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(250px,.86fr);gap:14px;margin-top:14px}
+.e10-buttons{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0}
+.e10-file-picker{position:relative;overflow:hidden;padding:12px 16px;background:#6ce9d8;border-radius:7px;color:#082932;font-size:10px;font-weight:800;cursor:pointer;white-space:nowrap}
+.e10-file-picker input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.e10-buttons button{padding:10px 13px;font-size:10px}
+.e10-columns{font-size:10px;color:#86aebb;line-height:1.8;overflow-wrap:anywhere;margin-bottom:15px}
+.e10-empty{min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px dashed #35596c;border-radius:9px;background:#102a37;text-align:center;padding:20px}
+.e10-empty strong{font-size:12px;color:#c7f4ef;letter-spacing:.07em}
+.e10-empty span{color:#91b1bf;font-size:11px;line-height:1.7}
+.e10-plot{background:#091926;padding:12px;border-radius:9px;border:1px solid #2d5061}
+.e10-plot svg{display:block;width:100%;height:auto}
+.e10-plot>.fine-print{margin:7px 0 0}
+.e10-source-line{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 0}
+.e10-source-line strong{font-size:10px;color:#a7edc9}
+.e10-source-line span{font-size:10px;color:#98b5c3;overflow-wrap:anywhere}
+.e10-error{margin-top:10px;color:#ffbd9d;background:#402b29;padding:12px;border:1px solid #a67562;border-radius:7px;font-size:11px}
+.e10-meta-panel label{display:flex;flex-direction:column;gap:7px;color:#b3d1d9;font-weight:700;font-size:11px;margin:15px 0}
+.e10-meta-panel input,.e10-meta-panel textarea{width:100%;border:1px solid #3c6474;border-radius:7px;padding:12px;background:#122d3d;color:#f1ffff;font-size:11px;font-family:inherit}
+.e10-meta-panel>.fine-print{margin-top:15px;line-height:1.7}
+.e10-report{margin-top:14px}
+.e10-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:16px}
+.e10-metrics>div{display:flex;flex-direction:column;gap:9px;border:1px solid #29525a;border-radius:7px;padding:14px;background:#10313b}
+.e10-metrics span{font-size:10px;color:#9cbac5}
+.e10-metrics strong{font-size:14px;color:#a7f5df;font-variant-numeric:tabular-nums}
+.e10-quality{margin-top:18px;border-top:1px solid #2c4b59;padding-top:17px}
+.e10-quality strong{color:#d0eee8;font-size:12px}
+.e10-quality p{color:#9dbec7;font-size:11px;line-height:1.8;margin-top:8px}
+.e10-panel>.e2-disclosure{margin-top:17px}
+@media(max-width:1020px){.e10-arch-info{grid-template-columns:1fr}.e10-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:940px){.e10-workbench{grid-template-columns:1fr}}
+@media(max-width:680px){.e10-panel{padding:16px}.e10-architecture,.e10-data-panel,.e10-meta-panel,.e10-report{padding:13px}.e10-arch-select{grid-template-columns:1fr}.e10-empty{min-height:205px}.e10-metrics{grid-template-columns:1fr 1fr}}

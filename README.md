@@ -219,6 +219,31 @@ SIMULATED and dimensionless, not physical motor efficiency claims.
 
 Protocol: [PM-E9-1.0.0](docs/EXPERIMENT_E9.md).
 
+## E10: SI signal bench and calibration-ready provenance gate
+
+E10 begins a **measurement-admission path**, without claiming that the
+project has built a physical actuator or collected validated sensor data.
+The React lab presents three possible actuator mechanism families
+(electromechanical, pneumatic/fluidic and specified smart materials)
+as engineering options, not as selected/sized hardware.
+
+A strict local-only CSV inspector accepts seven **SI-declared** columns:
+time (s), commanded/actual displacement (m), force (N), voltage (V),
+current (A) and temperature (°C). It validates header, time monotonicity,
+finite values and file limits, then computes sampled tracking diagnostics,
+electrical energy and mechanical work estimates. An optional
+deterministic synthetic example is unambiguously labeled SIMULATED.
+
+**Every user-imported CSV remains USER_SUPPLIED_UNVERIFIED**. A typed
+calibration record does not automatically verify sensor accuracy,
+sign conventions, SI units, efficiency, device identity or source
+authenticity. Exported receipts label these boundaries explicitly.
+No E9 dimensionless-to-SI conversion, electrical efficiency claim,
+road test or material claim is performed.
+
+Protocol, CSV schema and candidate bench protocol:
+[PM-E10-1.1.0](docs/EXPERIMENT_E10.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
