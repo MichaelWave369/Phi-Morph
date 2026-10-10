@@ -171,6 +171,30 @@ traction.
 
 Protocol: [PM-E7-0.8.0](docs/EXPERIMENT_E7.md).
 
+## E8: actuator response and mechanical-power characterization
+
+The ninth research station is deliberately an **isolated one-degree-of-freedom
+actuator bench** rather than another unvalidated tweak to the wheel solver.
+It studies a normalized controller that follows the E7 round → square → round
+command under force and sampled mechanical-power limits.
+
+E8 includes three gain-response profiles, three force caps, three power caps,
+a 27-case study, four negative/reference controls, and a mathematical
+analytic step-response comparison. The React panel graphs command against
+achieved position and reports lag, peak force/power, gross positive/negative
+work, energy residual and command-response loop-area proxy.
+
+The loop area represents **controller lag**, not observed material
+hysteresis. The force/power numbers are dimensionless model quantities,
+NOT watts, newtons or measured electrical consumption. No hardware or
+water-based material has been tested.
+
+The E8 protocol includes an explicitly labeled future physical
+measurement schema so that real calibrated samples can eventually be
+evaluated without being confused with simulated receipts.
+
+Protocol: [PM-E8-0.9.0](docs/EXPERIMENT_E8.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
