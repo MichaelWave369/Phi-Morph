@@ -82,6 +82,28 @@ Ground stiffness and damping both differ between the two numeric floors.
 
 Full E3 protocol: [PM-E3-0.4.0](docs/EXPERIMENT_E3.md).
 
+## E4: discrete-contact rolling and friction laboratory
+
+The fifth experimental station adds a **separate rigid wheel-outline model**
+with hub translation/rotation, clockwise motor torque, upward unilateral
+ground penalty forces and velocity-regularized tangential friction.
+
+Two *fixed* outlines (round and rounded square) share 24 contact nodes,
+a normalized RMS starting radius, mass and moment of inertia. The wheel
+view animates the rotation and simulated travel. The study runs 18
+combinations of shape, friction coefficient and torque at a chosen load,
+plus two no-ground negative controls, with JSON and CSV receipts.
+
+Zero-friction trials explicitly test whether a rotating wheel can move
+laterally without tangential contact forces. It should not.
+
+**E4 does not model actual shape change, fluid-cell actuation, physical
+tire traction, braking distance or a real structural material.** The
+segmented outline is rigid, coarse and has only point-node contact.
+The comparisons are not real design rankings.
+
+Protocol: [PM-E4-0.5.0](docs/EXPERIMENT_E4.md).
+
 ## Research boundaries
 
 - Ordinary or 'charged' water does not become a load-bearing solid merely from dialing a frequency.
